@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/(.*)',
+        destination: 'https://netflix-clone-v-shef.vercel.app/',
+        permanent: true,
+      },
+    ]
+  },
   reactStrictMode: true,
   images: {
     remotePatterns: [
@@ -12,4 +21,3 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
-"netflix-clone-v-shef.vercel.app"
